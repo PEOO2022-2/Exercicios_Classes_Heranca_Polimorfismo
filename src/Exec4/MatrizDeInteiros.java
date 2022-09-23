@@ -46,10 +46,12 @@ public class MatrizDeInteiros {
         } else {
             this.matriz[linha][coluna] = valor;
         }
+
+        this.apresentaMatriz();
     }
 
-    boolean ehQuadrada(int numLinhas, int numColunas) {
-        if (numLinhas == numColunas) return true;
+    boolean ehQuadrada() {
+        if (this.numLinhas == this.numColunas) return true;
         return false;
     }
 
@@ -60,6 +62,8 @@ public class MatrizDeInteiros {
                 soma += this.matriz[i][j];
             }
         }
+
+        System.out.println("Soma de todos os valores da matriz: " + soma);
         return soma;
     }
 
@@ -69,12 +73,16 @@ public class MatrizDeInteiros {
         for (int i = 0; i < numLinhas; i++) {
             for (int j = 0; j < numColunas; j++) {
                 if (this.matriz[i][j] == valor) {
+                    i += 1;
+                    j += 1;
                     System.out.println("Valor encontrado na linha: " + i);
                     System.out.println("Valor encontrado na coluna: " + j);
                     return i;
                 }
             }
         }
+
+        System.out.println("Esse valor não existe ");
         return -1;
     }
 }

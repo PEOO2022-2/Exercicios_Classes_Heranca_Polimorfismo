@@ -6,7 +6,7 @@ public class Main {
         MatrizDeInteiros matriz = new MatrizDeInteiros(3,3);
         matriz.apresentaMatriz();
 
-        System.out.println("Preenchendo a matriz!");
+        System.out.println("\nITEAM A - Preenchendo a matriz!");
         matriz.mudarUmValorNaMatriz(1,1,12);
         matriz.mudarUmValorNaMatriz(1,2,2);
 
@@ -17,18 +17,15 @@ public class Main {
         matriz.mudarUmValorNaMatriz(3,3,1);
         matriz.apresentaMatriz();
 
-
-        System.out.println("\nA matriz eh quadrada??");
-        boolean ehQuadrada = matriz.ehQuadrada(matriz.numLinhas, matriz.numColunas);
+        System.out.println("\nITEM B - A matriz eh quadrada??");
+        boolean ehQuadrada = matriz.ehQuadrada();
         if (ehQuadrada) System.out.println("Matriz eh quadrada!");
         else System.out.println("Matriz nao eh quadrada!");
 
-        System.out.println("\nQual a soma total dos valores?");
-        int soma = matriz.somaDeValores();
-        System.out.println("Soma de todos os valores da matriz: " + soma);
+        System.out.println("\nITEM C - Qual a soma total dos valores?");
+        matriz.somaDeValores();
 
-        int valor = 12;
-        System.out.println("\nEsse valor existe? " + valor);
-        matriz.buscarValor(valor);
+        System.out.println("\nITEM D - Esse valor existe?");
+        matriz.buscarValor(12);
     }
 }
